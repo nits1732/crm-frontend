@@ -1,11 +1,16 @@
 import './App.css';
 import React from 'react'
 // import { Button } from 'react-bootstrap';
-import { Entry } from './page/entry/Entry.page';
+import { DefaultLayout } from './Layout/DefaultLayout';
 function App() {
   return (
     <div className="App">
-      <Entry />
+       {/* <Entry />  */}
+      <DefaultLayout>
+        //Dashboard
+      </DefaultLayout>
+
+
     </div>
   );
 }

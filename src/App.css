@@ -1,0 +1,23 @@
+.default-layout{
+    display: grid;
+    grid-template-rows: 80px auto 3rem;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+/* since the grid template area will not tell which one should get what area therefore we have to explicitly tell the amount of the areas */
+header{
+    grid-area: header;
+}
+main{
+    grid-area: main;
+    min-height: 88vh;
+}
+footer{
+    grid-area: footer;
+    background: black;
+    padding: 1rem;
+    color: rgb(238, 229, 213);
+}
