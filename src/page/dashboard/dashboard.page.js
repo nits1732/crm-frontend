@@ -6,7 +6,6 @@ import { PageBreadcrumb } from '../../components/breadcrumb/Breadcrumb.comp'
 export const Dashboard = () => {
   return (
     <Container>
-        <br/>
         <Row>
             <Col>
             <PageBreadcrumb page="Dashboard"/>

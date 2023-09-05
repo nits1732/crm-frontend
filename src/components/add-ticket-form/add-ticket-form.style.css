@@ -1,0 +1,9 @@
+.add-new-ticket{
+    background: rgb(242, 233, 215);
+    box-shadow: 0px 0px 15px -5px black;
+    padding: 2px;
+    font-weight: 30px;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
