@@ -3,7 +3,30 @@
         "id":1,
         "subject":"Issue with the Email Certificate",
         "status":"Client Response Pending",
-        "addedat":"2020-10-21"
+        "addedat":"2020-10-21",
+        "history":[
+            {
+                "date":"10-12-2023",
+                "message":"Fix Asap",
+                "messageby": "Client"
+            },
+            {
+                "date":"10-12-2023",
+                "message":"Fix Asap",
+                "messageby": "Client"
+            },
+            {
+                "date":"10-12-2023",
+                "message":"Fix Asap",
+                "messageby": "Client"
+            },
+            {
+                "date":"10-12-2023",
+                "message":"Fix Asap",
+                "messageby": "Client"
+            }
+
+        ]
     },
     {
         "id":2,
