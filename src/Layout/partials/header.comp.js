@@ -1,7 +1,14 @@
 import React from 'react'
 import logo from "../../assets/img/logo.jpeg"
 import { Navbar, Nav } from 'react-bootstrap'
+// import {Link} from 'react-router-dom/cjs/react-router-dom';
+// import { LinkContainer } from 'react-router-bootstrap';
+import { NavLink } from 'react-router-dom';
 export const Header = () => {
+  // const history =useHistory();
+  // const logmeout = ()=>{
+  //   history.push("/")
+  // }
   return (
     <Navbar
     //menu collapseable
@@ -16,10 +23,12 @@ export const Header = () => {
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav"/>
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="ms-auto">
-          <Nav.Link href="/dashboard">Dashboard</Nav.Link>
-          <Nav.Link href="/tickets">Tickets</Nav.Link>
-          <Nav.Link href="/logout">Logout</Nav.Link>
+        <Nav className="ms-auto ">
+          <NavLink to="/dashboard"  style={{ marginRight: 15 }}>Dashboard</NavLink>
+          <NavLink  to="/tickets"  style={{ marginRight: 15 }}>Tickets</NavLink>
+          <NavLink to="/"  style={{ marginRight: 15 }}>Logout</NavLink>
+          {/* <LinkContainer to="">Dummy</LinkContainer> */}
+          {/* <NavLink to="/">Dummy</NavLink> */}
         </Nav>
       </Navbar.Collapse>
     </Navbar>

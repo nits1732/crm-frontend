@@ -4,10 +4,20 @@ import { PageBreadcrumb } from '../../components/breadcrumb/Breadcrumb.comp'
 import tickets from "../../assets/data/dummy-tickets.json"
 import { MessageHistory } from '../../components/message-history/MessageHistory.comp'
 import { UpdateTicket } from '../../components/update-ticket/UpdateTicket.comp'
-const ticket1=tickets[0]
+import { useParams } from 'react-router-dom'
+// const ticket=tickets[0]
 export const Ticket = () => {
+  const {tid}=useParams()
   const [message, setmessage] = useState('');
-  useEffect(() => {}, [message])
+  const [ticket, setticket] = useState('');
+  useEffect(() => {
+    for (let i = 0; i < tickets.length; i++) {
+      if(tickets[i].id==tid){
+        setticket(tickets[i])
+        continue;
+      }
+    }
+  }, [message,tid])
   
   const handleOnChange=e=>{
     setmessage(e.target.value)
@@ -25,9 +35,9 @@ export const Ticket = () => {
             </Row>
             <Row>
               <Col className='text-weight-bolder text-secondary'>
-              <div className='subject'>Subject : {ticket1.subject}</div>
-              <div className='date'>Ticket Opened : {ticket1.addedat}</div>
-              <div className='Status'>Status : {ticket1.status}</div>
+              <div className='subject'>Subject :{ticket.subject}</div>
+              <div className='date'>Ticket Opened :{ticket.addedat}</div>
+              <div className='Status'>Status :{ticket.status}</div>
               </Col>
               <Col className='text-end'>
               <Button variant='outline-info'>Close Ticket</Button>
@@ -35,7 +45,7 @@ export const Ticket = () => {
             </Row>
             <Row className='mt-5'>
               <Col>
-              <MessageHistory msg={ticket1.history}/>
+              {ticket.history && <MessageHistory msg={ticket.history}/>}
               </Col>
             </Row>
             <Row>

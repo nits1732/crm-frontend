@@ -19,7 +19,7 @@ export const AddTicket = () => {
   const [errordata,seterrordata]=useState(initialErrorData);
   const handleOnChange= (e)=>{
     const {name,value}=e.target;
-    // useEffect(() => {}, [formdata])
+    useEffect(() => {}, [formdata])
     
 
     setformdata({
